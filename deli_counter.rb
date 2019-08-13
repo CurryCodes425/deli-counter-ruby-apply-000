@@ -24,7 +24,7 @@ end
 
 def now_serving (next_in_line)
 	if next_in_line.empty? == true
-		puts "There is nobody waiting to be served."
+		puts "There is nobody waiting to be served!"
 	elsif next_in_line.empty? == false
 		puts "Currently serving #{next_in_line[0]}."
 		next_in_line.shift #shift will remove the first element of next_in_line and returns it,
