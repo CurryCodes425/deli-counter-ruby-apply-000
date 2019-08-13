@@ -5,11 +5,12 @@ def line(number)
 line_number_array = []
 	if number.length == 0
   puts "The line is currently empty."
-	else
-	line_number_array.each.with_index(0) do |name, index|
-		line_number_array.push("#{index}. #{name}") # "<<"" will push the name into the index
+	else 
+	message = "The line is currently:"
+	number.each_with_index do |value, index|
+		message += " #{index.to_i+1}. #{value}"
 	end
-puts "The line is: #{line_number_array.join(" ")}"
+	puts "#{message}"
 end
 end
 
@@ -21,17 +22,16 @@ def take_a_number (katz_deli, name)
 end
 
 def now_serving (next_in_line)
-	if next_in_line.empty?
+	if next_in_line.empty? == true
 		puts "There is nobody waiting to be served."
-	else
+	elsif next_in_line.empty? == false
 		puts "Currently serving #{next_in_line[0]}."
-		next_in_line.shift #shift will remove the first element of next_in_line and returns it,
+		next_in_line.shift #shift will remove the first element of next_in_line and returns it, 
 		#which shifts all other elements down by one
-		#if the next_in_line array is empty, returns nil
+		#if the next_in_line array is empty, returns nil 
 	end
 end
 
-line(katz_deli)
 take_a_number(katz_deli,"Ada")
 take_a_number(katz_deli,"Grace")
 take_a_number(katz_deli,"Kent")
@@ -39,3 +39,4 @@ line(katz_deli)
 now_serving(katz_deli)
 
 take_a_number(katz_deli,"Matt")
+
