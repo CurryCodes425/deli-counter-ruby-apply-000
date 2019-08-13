@@ -5,7 +5,7 @@ def line(number)
 line_number_array = []
 	if number.length == 0
   puts "The line is currently empty."
-	else 
+	else
 	message = "The line is currently:"
 	number.each_with_index do |value, index|
 		message += " #{index.to_i+1}. #{value}"
@@ -26,9 +26,9 @@ def now_serving (next_in_line)
 		puts "There is nobody waiting to be served."
 	elsif next_in_line.empty? == false
 		puts "Currently serving #{next_in_line[0]}."
-		next_in_line.shift #shift will remove the first element of next_in_line and returns it, 
+		next_in_line.shift #shift will remove the first element of next_in_line and returns it,
 		#which shifts all other elements down by one
-		#if the next_in_line array is empty, returns nil 
+		#if the next_in_line array is empty, returns nil
 	end
 end
 
@@ -39,4 +39,3 @@ line(katz_deli)
 now_serving(katz_deli)
 
 take_a_number(katz_deli,"Matt")
-
