@@ -14,6 +14,7 @@ line_number_array = []
 end
 end
 
+line(katz_deli)
 
 def take_a_number (katz_deli, name)
 	katz_deli << (name)
